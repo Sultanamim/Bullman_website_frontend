@@ -108,7 +108,7 @@ export default function Footer() {
               placeholder="E-mail"
               value={emailBody}
               onChange={(e) => setEmailBody(e.target.value)}
-              className="text-white w-[320px] bg-black border-0 focus:outline-none placeholder-gray-400"
+              className="text-white w-[320px] xsm:w-[260px] bg-black border-0 focus:outline-none placeholder-gray-400"
             />
             <button type="submit">
               <i className="fa-solid fa-arrow-right-long text-fade"></i>

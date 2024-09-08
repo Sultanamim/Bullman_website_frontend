@@ -7,7 +7,7 @@ export default function ImageShowBox({ images }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const handleNext = () => {
-    if (startIndex + 5 < images.length) {
+    if (startIndex + 4 < images.length) {
       setStartIndex(startIndex + 1);
     }
   };
@@ -29,12 +29,12 @@ export default function ImageShowBox({ images }) {
           className="w-[743px] h-[550px] mlg:w-[420px] mlg:h-[300px]"
         />
       </div>
-      <div className="flex flex-col mlg:flex-row items-center justify-center pr-10">
-        <button onClick={handlePrev} className="mb-2">
+      <div className="flex flex-col mlg:flex-row items-center justify-center pr-10 mlg:pr-0 mlg:px-5">
+        <button onClick={handlePrev} className="mb-2 mlg:mb-0">
           <i className="mlg:hidden fa-solid fa-arrow-up-long text-gray-800 text-[12px] "></i>
           <i className="mtl:hidden fa-solid fa-arrow-left-long text-gray-800 text-[12px] "></i>
         </button>
-        {images.slice(startIndex, startIndex + 5).map((item, index) => (
+        {images.slice(startIndex, startIndex + 4).map((item, index) => (
           <Image
             src={item}
             key={index}
@@ -42,11 +42,11 @@ export default function ImageShowBox({ images }) {
             objectFit="contain"
             width={80}
             height={80}
-            className="w-[80px] h-[80px] object-contain my-1 cursor-pointer hover:opacity-60"
+            className="w-[80px] h-[80px] mlg:w-[50px] mlg:h-[50px] mlg:mx-1 object-contain my-1 cursor-pointer hover:opacity-60"
             onClick={() => setSelectedImage(item)}
           />
         ))}
-        <button onClick={handleNext} className="mt-2">
+        <button onClick={handleNext} className="mt-2 mlg:mt-0">
           <i className="mlg:hidden fa-solid fa-arrow-down-long text-gray-800 text-[12px] "></i>
           <i className="mtl:hidden fa-solid fa-arrow-right-long text-gray-800 text-[12px] "></i>
         </button>

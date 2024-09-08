@@ -27,7 +27,7 @@ export default function ProductImageCard({
   };
 
   return (
-    <div className="mb-10 mx-1">
+    <div className="mb-10 mx-1 xsm:mx-0">
       {/* image card */}
       <div
         className={`relative w-[224.2px] group overflow-hidden ${

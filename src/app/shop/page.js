@@ -62,7 +62,7 @@ export default function ProductDetail({ searchParams }) {
   }
 
   return (
-    <main className="px-20 mt-10 bg-white mlg:px-5">
+    <main className="px-20 mt-10 stm:mt-14 bg-white mlg:px-5">
       <Breadcrumb slug={slug} />
       {/* --------- Main --------- */}
       <div className="flex flex-row mlg:flex-wrap w-full mt-10">

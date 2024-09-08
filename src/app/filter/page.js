@@ -49,6 +49,7 @@ export default function Filter({ searchParams }) {
       if (catId !== "") {
         setLoading(true);
         const catProduct = await fetchFromBackend(`/categories/${catId}`);
+        //console.log(catProduct);
         setFilters(catProduct.filters);
         setProducts(catProduct.products);
         setTotalPages(Math.ceil(catProduct.products.length / selectedLimit));
@@ -369,7 +370,7 @@ export default function Filter({ searchParams }) {
             </div>
           ) : currentProducts.length > 0 ? (
             <>
-              <div className="grid grid-cols-4 lg:grid-cols-3 xmd:grid-cols-2 md:grid-cols-1 smd:grid-cols-2 sm:grid-cols-1 xsm:grid-cols-1 px-3 w-full mt-5">
+              <div className="grid grid-cols-4 lg:grid-cols-3 xmd:grid-cols-2 md:grid-cols-1 smd:grid-cols-2 sm:grid-cols-1 xsm:grid-cols-1 items-center px-2 w-full mt-5">
                 {currentProducts.map((item, index) => (
                   <Link
                     key={index}
